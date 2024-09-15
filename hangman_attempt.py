@@ -17,7 +17,7 @@ while attempt < 6:
     guess_caps = guess.upper()
     if guess_caps in secret_word_caps:
         print("Correct! \nThere is", secret_word.count(guess), guess_caps,"in the word" )
-        secret_word_caps = secret_word_caps.replace(guess,"")
+        secret_word_caps = secret_word_caps.replace(guess_caps,"")
         attempt -= 1
     elif attempt == 0:
         print("Incorrect!")
@@ -39,8 +39,10 @@ while attempt < 6:
         print("Incorrect!")
         head, torso, left_arm, right_arm = body_parts()
         print("     ",head,"\n   ",left_arm,torso,right_arm,"\n    ",left_arm)
+        #Uses left arm because its the same as the left leg
     elif attempt == 5:
         print("Incorrect!")
         head, torso, left_arm, right_arm = body_parts()
         print("     ",head,"\n   ",left_arm,torso,right_arm,"\n    ",left_arm,right_arm)
+        #Uses right arm because its the same as the right leg
     attempt += 1
