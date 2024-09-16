@@ -18,6 +18,8 @@ while attempt < 6:
     if guess_caps in secret_word_caps:
         print("Correct! \nThere is", secret_word.count(guess), guess_caps,"in the word" )
         secret_word_caps = secret_word_caps.replace(guess_caps,"")
+        if len(secret_word_caps) == 0:
+            print("You win!!")
         attempt -= 1
     elif attempt == 0:
         print("Incorrect!")
